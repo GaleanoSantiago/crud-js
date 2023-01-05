@@ -1,6 +1,7 @@
 const formVenta = document.getElementById("form-venta");
 const date=document.getElementById("date");
 const selectWorker = document.getElementById("trabajadora");
+const cliente = document.getElementById("cliente");
 const selectorServices = document.getElementById("servicio");
 const inputPago=document.getElementById("pago-recibido");
 const pagoWorker=document.getElementById("pago-trabajadoras");
@@ -15,6 +16,7 @@ let ventas=[
     {
         fecha:"01/01/2023",
         trabajadora: "Femenia Gisel",
+        cliente:"Martinez Sofia",
         servicio:"Manicura",
         totalRecibido:"1200",
         pagoWorker:"480",
@@ -24,6 +26,7 @@ let ventas=[
     {
         fecha:"02/01/2023",
         trabajadora: "Figueredo Wanda",
+        cliente:"Gomez Agustina",
         servicio:"Pedicura",
         totalRecibido:"1300",
         pagoWorker:"520",
@@ -33,6 +36,7 @@ let ventas=[
     {
         fecha:"03/01/2023",
         trabajadora: "Leguizamon Carla",
+        cliente:"Esquivel Ludmila",
         servicio:"Masaje",
         totalRecibido:"2300",
         pagoWorker:"920",
@@ -42,6 +46,7 @@ let ventas=[
     {
         fecha:"04/01/2023",
         trabajadora: "Gomez Estefania",
+        cliente:"Lopez Maria",
         servicio:"Uñas de Acrilico",
         totalRecibido:"1100",
         pagoWorker:"440",
@@ -98,6 +103,7 @@ btnForm.addEventListener("click",(e)=>{
     venta={
         fecha:date.value,
         trabajadora: selectWorker.options[selectWorker.selectedIndex].text,
+        cliente:cliente.value,
         servicio: selectorServices.options[selectorServices.selectedIndex].text,
         totalRecibido:inputPago.value,
         pagoWorker:pagoWorker.value,
@@ -122,6 +128,7 @@ const cargarTabla = ()=>{
     contenidoTabla = `<thead class="bg-pp text-center"><tr>
     <th>Fecha</th>
     <th>Trabajadora</th>
+    <th>Cliente</th>
     <th>Servicio</th>
     <th>Total Recibido</th>
     <th>Pago Trabajadoras</th>
@@ -132,6 +139,7 @@ const cargarTabla = ()=>{
         contenidoTabla = `${contenidoTabla} <tr> 
           <td> ${vnt.fecha}</td>
           <td>${vnt.trabajadora}</td>
+          <td>${vnt.cliente}</td>
           <td>${vnt.servicio}</td>
           <td class="bg-sp border border-secondary">$${vnt.totalRecibido}</td>
           <td class="bg-rp border border-secondary">$${vnt.pagoWorker}</td>

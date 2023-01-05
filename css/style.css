@@ -63,10 +63,6 @@ section{
     padding:30px 0;
 }
 
-/* #pago-recibido{
-    background:var(--bs-info);
-} */
-
 table{
     border:1px solid var(--bs-secondary);
     border-radius:10px;
@@ -85,6 +81,13 @@ table thead{
 
 
 /* -------------------------Responsive--------------------- */
+@media only screen and (min-width:1000px){
+
+    .container-x{
+        margin:auto;
+        padding:0 60px;
+    }
+}
 
 @media only screen and (max-width:767px){
     table{

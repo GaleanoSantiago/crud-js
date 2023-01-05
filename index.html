@@ -15,16 +15,16 @@
 <body>
     
     <section class="border">
-        <div class="container">
+        <div class="container-fluid container-x">
             <div class="row">
                 <div class="col-12 col-lg-5 col-md-4 col-sm-12 ">
                     <h3>Formulario de Venta</h3>
-                    <form id="form-venta">
-                        <div class="mb-3">
+                    <form id="form-venta" autocomplete="off">
+                        <div class="mb-2">
                           <label for="fecha" class="form-label">Fecha</label>
-                          <input type="date" class="form-control" id="date">
+                          <input type="date" class="form-control" id="date" value="2023-01-05">
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2">
                           <label for="trabajadora" class="form-label">Trabajadora</label>
                           <select name="trabajadora" id="trabajadora" class="form-select">
                             <option value="0">Seleccionar Trabajadora</option>
@@ -34,7 +34,11 @@
                             <option value="4">Gomez Estefania</option>
                           </select>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2">
+                            <label for="" class="label">Cliente</label>
+                            <input type="text" name="cliente" id="cliente" class="form-control" value="Elizabeth">
+                        </div>
+                        <div class="mb-2">
                           <label class="form-label" for="servicio">Servicios</label>
                           <select name="servicio" id="servicio" class="form-select">
                             <option value="0">Seleccionar Servicio</option>
@@ -44,15 +48,15 @@
                             <option value="4">Masaje</option>
                           </select>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <label for="pago-recibido" class="form-label">Precio por Servicio <span class="text-secondary">$</span></label>
                             <input type="number" name="pago-recibido" id="pago-recibido" class="form-control bg-sp" disabled>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <label for="pago-trabajadoras" class="form-label">Pago para las Trabajadoras <span class="text-secondary">$</span></label>
                             <input type="number" name="pago-trabajadoras" id="pago-trabajadoras" class="form-control bg-rp" disabled>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <label for="pago-empresa" class="form-label">Pago para la Empresa <span class="text-secondary">$</span></label>
                             <input type="number" name="pago-empresa" id="pago-empresa" class="form-control bg-ip" disabled>
                         </div>
