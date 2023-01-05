@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Contable Ejemplo</title>
+    <!-- CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" 
+    crossorigin="anonymous">
+    <!-- Css Propios -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <section class="border">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-5 col-md-4 col-sm-12 ">
+                    <h3>Formulario de Venta</h3>
+                    <form id="form-venta">
+                        <div class="mb-3">
+                          <label for="fecha" class="form-label">Fecha</label>
+                          <input type="date" class="form-control" id="date">
+                        </div>
+                        <div class="mb-3">
+                          <label for="trabajadora" class="form-label">Trabajadora</label>
+                          <select name="trabajadora" id="trabajadora" class="form-select">
+                            <option value="0">Seleccionar Trabajadora</option>
+                            <option value="1">Femenia Gisel</option>
+                            <option value="2">Figueredo Wanda</option>
+                            <option value="3">Leguizamon Carla</option>
+                            <option value="4">Gomez Estefania</option>
+                          </select>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label" for="servicio">Servicios</label>
+                          <select name="servicio" id="servicio" class="form-select">
+                            <option value="0">Seleccionar Servicio</option>
+                            <option value="1">Manicura</option>
+                            <option value="2">Pedicura</option>
+                            <option value="3">Uñas de Acrilico</option>
+                            <option value="4">Masaje</option>
+                          </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pago-recibido" class="form-label">Precio por Servicio <span class="text-secondary">$</span></label>
+                            <input type="number" name="pago-recibido" id="pago-recibido" class="form-control bg-sp" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pago-trabajadoras" class="form-label">Pago para las Trabajadoras <span class="text-secondary">$</span></label>
+                            <input type="number" name="pago-trabajadoras" id="pago-trabajadoras" class="form-control bg-rp" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pago-empresa" class="form-label">Pago para la Empresa <span class="text-secondary">$</span></label>
+                            <input type="number" name="pago-empresa" id="pago-empresa" class="form-control bg-ip" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="medios_pago" class="form-label">Medios de Pago</label>
+                            <select name="medios_pago" id="medios_pago" class="form-select">
+                                    <option value="0">Seleccionar Metodo de Pago</option>
+                                    <option value="1">Efectivo</option>
+                                    <option value="2">Tarjeta de Debito</option>
+                                    <option value="3">Tarjeta de Credito</option>
+                                    <option value="4">Mercado Pago</option>
+                                </select>
+                        </div>
+                        <div class="mb-3 text-center">
+                            <!-- <button class="btn btn-primary btn-submit" id="btn-calcular">Calcular</button> -->
+                            <button type="submit" class="btn btn-success btn-submit" id="btn-submit">Guardar Venta</button>
+                            <button type="reset" class="btn btn-danger">Reset</button>
+                        </div>
+                      </form>
+                </div>
+                <div class="col-6 col-12 col-lg-7 col-md-8 col-sm-12 d-flex align-items-center justify-content-center">
+                    <div class="table-responsive">
+                    <table class="table table-hover table-striped" id="tabla-ventas">
+                        <!-- <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Trabajadora</th>
+                            <th>Servicio</th>
+                            <th>Total Recibido</th>
+                            <th>Medio de Pago</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>01/01/2023</td>
+                                <td>Femenia Gisel</td>
+                                <td>Manicura</td>
+                                <td>$1200</td>
+                                <td>Tarjeta de Debito</td>
+                            </tr>
+                            <tr>
+                                <td>02/01/2023</td>
+                                <td>Figueredo Wanda</td>
+                                <td>Pedicura</td>
+                                <td>$1300</td>
+                                <td>Tarjeta de Credito</td>
+                            </tr>
+                            <tr>
+                                <td>03/01/2023</td>
+                                <td>Leguizamon Carla</td>
+                                <td>Masaje</td>
+                                <td>$2300</td>
+                                <td>Mercado Pago</td>
+                            </tr>
+                            <tr>
+                                <td>04/01/2023</td>
+                                <td>Gomez Estefania</td>
+                                <td>Uñas de Acrilico</td>
+                                <td>$1100</td>
+                                <td>Efectivo</td>
+                            </tr>
+                        </tbody> -->
+                    </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <!-- JS Propios -->
+    <script src="./js/code.js"></script>
+</body>
+</html>

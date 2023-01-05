@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root{
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning:#ffc107;
+    --bs-danger:#dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --z1:#232741;
+    --z2:#2c2e43;
+    --darkBodyP:#181818;
+    --darkPretty: #333;
+    --darkPretty2:#222;
+    --yellowMostaza: #e8a900;
+    --bg-whiteBlue:#F0F0F0;
+    --bg-whiteSmooth:#FAFAFA;
+    --azulWhite: #f2f6fc;
+    --azulLight: #f6f8fc;
+    --azulLite: #eaf1fb;
+    --aL: #f5f6f7;
+
+    --rosaPastel:#ffe5f0;
+    --rosaPastel2:#ff6961;
+    --infoPastel:#b2dafa;
+    --amarPastel:#fdfd96;
+    --successPastel:#a5eea0;
+    --purplePastel:#dfcae1;
+
+}
+
+.bg-rp{
+    background-color:var(--rosaPastel) !important;
+}
+.bg-rp2{
+    background-color:var(--rosaPastel2) !important;
+}
+.bg-ip{
+    background-color:var(--infoPastel) !important;
+}
+.bg-ap{
+    background-color:var(--amarPastel) !important;
+}
+.bg-sp{
+    background-color:var(--successPastel) !important;
+}
+.bg-pp{
+    background-color:var(--purplePastel);
+}
+
+section{
+    padding:30px 0;
+}
+
+/* #pago-recibido{
+    background:var(--bs-info);
+} */
+
+table{
+    border:1px solid var(--bs-secondary);
+    border-radius:10px;
+}
+table th, table td{
+    border:1px solid var(--bs-gray-500);
+    
+}
+table th{
+    border:1px solid var(--bs-secondary);
+}
+table thead{
+    font-size:.85rem;
+
+}
+
+
+/* -------------------------Responsive--------------------- */
+
+@media only screen and (max-width:767px){
+    table{
+        margin-top: 80px;
+    }
+}
